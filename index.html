@@ -168,7 +168,7 @@
             <a href="https://github.com/habufinance/web" target="_blank">
                 <p class="clickableButton">Github | </p>
             </a>
-            <a href="https://justswap.io/#/home?tokenAddress=TYVMRcSxXBfRda6aShMRRsc5ovRWHEeZS4&type=swap"
+            <a href="https://justswap.io/#/home?tokenAddress=TBVc4eMxqB76zaHunj7B7T2Tu5iqGdT7q6&type=swap"
                target="_blank">
                 <p class="clickableButton">Justswap</p>
             </a>
@@ -199,10 +199,10 @@
                 <h3>It's a great day to mine some Hamburger on TRON.</h3>
                 <div class="h5" style="color: rgb(91, 38, 57); font-weight: 700;">
                     Smart contract:
-                    <a href="https://tronscan.org/#/contract/TYVMRcSxXBfRda6aShMRRsc5ovRWHEeZS4" target="_blank"
+                    <a href="https://tronscan.org/#/contract/TBVc4eMxqB76zaHunj7B7T2Tu5iqGdT7q6" target="_blank"
                        class="clickableButton"
-                       onclick="copy_address('https://tronscan.org/#/contract/TYVMRcSxXBfRda6aShMRRsc5ovRWHEeZS4')">
-                        <span disabled id="address" class="ellipsis" style="color: rgb(91, 38, 57);">TYVMRcSxXBfRda6aShMRRsc5ovRWHEeZS4</span>
+                       onclick="copy_address('https://tronscan.org/#/contract/TBVc4eMxqB76zaHunj7B7T2Tu5iqGdT7q6')">
+                        <span disabled id="address" class="ellipsis" style="color: rgb(91, 38, 57);">TBVc4eMxqB76zaHunj7B7T2Tu5iqGdT7q6</span>
                         <span style="color: rgb(91, 38, 57); position: relative; top: 2px;">
                                         <svg viewBox="64 64 896 896" focusable="false" class="" data-icon="copy"
                                              width="1em"
@@ -341,7 +341,7 @@
 
                     function getBalanceSC() {
                         var res = 0;
-                        fetch('https://apilist.tronscan.io/api/account?address=TYVMRcSxXBfRda6aShMRRsc5ovRWHEeZS4').then(response => response.json()).then(
+                        fetch('https://apilist.tronscan.io/api/account?address=TBVc4eMxqB76zaHunj7B7T2Tu5iqGdT7q6').then(response => response.json()).then(
                             data => $("#scBalance").text((data.trc20token_balances[1].balance / 1000000000000000000).toLocaleString())
                         );
                     }
