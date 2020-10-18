@@ -1,0 +1,465 @@
+<html>
+
+<head>
+    <style type="text/css">
+        .anticon {
+            display: inline-block;
+            color: inherit;
+            font-style: normal;
+            line-height: 0;
+            text-align: center;
+            text-transform: none;
+            vertical-align: -0.125em;
+            text-rendering: optimizeLegibility;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .anticon > * {
+            line-height: 1;
+        }
+
+        .anticon svg {
+            display: inline-block;
+        }
+
+        .anticon::before {
+            display: none;
+        }
+
+        .anticon .anticon-icon {
+            display: block;
+        }
+
+        .anticon[tabindex] {
+            cursor: pointer;
+        }
+
+        .anticon-spin::before,
+        .anticon-spin {
+            display: inline-block;
+            -webkit-animation: loadingCircle 1s infinite linear;
+            animation: loadingCircle 1s infinite linear;
+        }
+
+        @-webkit-keyframes loadingCircle {
+            100% {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes loadingCircle {
+            100% {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+    <meta charset="utf-8">
+    <meta name="description" content="Farm Hamburger tokens on Tron. Highest yield farming DeFi Project.">
+    <meta name="keywords"
+          content="blockchain,decentralize, hamburger, defi, token, roi, dividends, daily roi, daily dividends, staking, defi token, swap, justswap, uniswap, tron, tron network">
+    <meta name="author" content="Hamburger">
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <meta name="theme-color" content="#f0e7ea">
+    <link rel="shortcut icon" href="/images/hamberger.png">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;600;700;800&amp;display=swap"
+          rel="stylesheet">
+    <link
+            href="https://fonts.googleapis.com/css?family=Poppins:400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;display=swap"
+            rel="stylesheet">
+    <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&amp;display=swap"
+            rel="stylesheet">
+    <link
+            href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&amp;display=swap"
+            rel="stylesheet">
+    <title>Hamburger</title>
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-172433017-2"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+    <link href="/css/ham.chunk.css" rel="stylesheet">
+    <link href="/css/main.ham.chunk.css" rel="stylesheet">
+<!--    <link href="../public/css/style.css" rel="stylesheet">-->
+<!--    <link href="../public/css/ham.chunk.css" rel="stylesheet">-->
+<!--    <link href="../public/css/main.ham.chunk.css" rel="stylesheet">-->
+    <style id="plotly.js-style-global"></style>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link href="/css/style.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+    <script>
+        function isInstalled() {
+            if (window.tronWeb) {
+                console.log("Yes, catch it:");
+                return true;
+            }
+            return false;
+        }
+
+        function checkInstall() {
+            if (!isInstalled()) {
+                alert("You need install extension tronlink and login tronlink!");
+            }
+        }
+        $(document).ready(function () {
+
+            $("#popup").hide().fadeIn(1000);
+
+            $("#close").on("click", function (e) {
+                e.preventDefault();
+                $("#popup").fadeOut(1000);
+            });
+
+        });
+
+    </script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+</head>
+
+<body onload="checkInstall()">
+
+<div id="popup" class="modal">
+    <div class="popup-content">
+        <span class="close" id="close">&times;</span>
+        <img class="img-popup" src="/images/ham-sale.jpg" width="100%" height="80%" alt="popup">
+    </div>
+
+</div>
+
+<div class="App">
+    <div class="header">
+        <!--        <div class="clickableButton nav-header">-->
+        <!--            <a href="#" class="home">-->
+        <!--                <span>Home |&nbsp;</span>-->
+        <!--            </a>-->
+        <!--            <a href="https://docs.habu.finance" class="docs">-->
+        <!--                <span>Documents |&nbsp;</span>-->
+        <!--            </a>-->
+        <!--            <a href="https://medium.com/@habu.finance" class="social">-->
+        <!--                <span>Medium</span>-->
+        <!--            </a>-->
+        <!--        </div>-->
+        <a class="logo clickableButton" href="/"><img src="/images/logo-ham.png" alt="logo"
+                                                      class="logo"><span>Hamburger</span></a>
+        <!--        <div class="menu">-->
+        <div class="headertabs horizontalTabs" align="middle">
+            <a href="#">
+                <p class="highlitedTab clickableButton">Home | </p>
+            </a>
+            <a href="farms.html">
+                <p class="clickableButton">Farm | </p>
+            </a>
+            <a href="https://docs.habu.finance/habu-ecosystem/how-to-buy-ham-token-via-tronlink-walllet"
+               target="_blank">
+                <p class="clickableButton">Help | </p>
+            </a>
+            <a href="https://github.com/habufinance/web" target="_blank">
+                <p class="clickableButton">Github | </p>
+            </a>
+            <a href="https://justswap.io/#/home?tokenAddress=TYVMRcSxXBfRda6aShMRRsc5ovRWHEeZS4&type=swap"
+               target="_blank">
+                <p class="clickableButton">Justswap</p>
+            </a>
+        </div>
+        <!--        </div>-->
+
+        <div id="myWall" class="myWallet clickableButton" data-toggle="modal" data-target="#modalBuy">
+            <span>My Wallet</span>
+        </div>
+        <p class="ant-dropdown-link flag ant-dropdown-trigger">
+                            <span><img
+                                    src="data:image/png;base64,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"
+                                    alt="EN" width="30px">&nbsp;&nbsp;EN</span>
+            <span role="img" aria-label="down" class="anticon anticon-down">
+                                 <svg viewBox="64 64 896 896" focusable="false" class="" data-icon="down" width="1em"
+                                      height="1em"
+                                      fill="currentColor" aria-hidden="true">
+                                    <path d="M884 256h-75c-5.1 0-9.9 2.5-12.9 6.6L512 654.2 227.9 262.6c-3-4.1-7.8-6.6-12.9-6.6h-75c-6.5 0-10.3 7.4-6.5 12.7l352.6 486.1c12.8 17.6 39 17.6 51.7 0l352.6-486.1c3.9-5.3.1-12.7-6.4-12.7z"></path>
+                                 </svg>
+                              </span>
+        </p>
+    </div>
+    <div class="homepage">
+        <div class="container text-center">
+            <div class="greating">
+                <img src="/images/logo-ham.png" alt="hamburger" width="160">
+                <h1 class="my-2">Stake Anytime, Unstake Anytime, Get Rewards Instantly.</h1>
+                <h3>It's a great day to mine some Hamburger on TRON.</h3>
+                <div class="h5" style="color: rgb(91, 38, 57); font-weight: 700;">
+                    Smart contract:
+                    <a href="https://tronscan.org/#/contract/TYVMRcSxXBfRda6aShMRRsc5ovRWHEeZS4" target="_blank"
+                       class="clickableButton"
+                       onclick="copy_address('https://tronscan.org/#/contract/TYVMRcSxXBfRda6aShMRRsc5ovRWHEeZS4')">
+                        <span disabled id="address" class="ellipsis" style="color: rgb(91, 38, 57);">TYVMRcSxXBfRda6aShMRRsc5ovRWHEeZS4</span>
+                        <span style="color: rgb(91, 38, 57); position: relative; top: 2px;">
+                                        <svg viewBox="64 64 896 896" focusable="false" class="" data-icon="copy"
+                                             width="1em"
+                                             height="1em" fill="currentColor" aria-hidden="true">
+                                            <path d="M832 64H296c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h496v688c0 4.4 3.6 8 8 8h56c4.4 0 8-3.6 8-8V96c0-17.7-14.3-32-32-32zM704 192H192c-17.7 0-32 14.3-32 32v530.7c0 8.5 3.4 16.6 9.4 22.6l173.3 173.3c2.2 2.2 4.7 4 7.4 5.5v1.9h4.2c3.5 1.3 7.2 2 11 2H704c17.7 0 32-14.3 32-32V224c0-17.7-14.3-32-32-32zM350 856.2L263.9 770H350v86.2zM664 888H414V746c0-22.1-17.9-40-40-40H232V264h432v624z"></path>
+                                        </svg>
+                                    </span>
+                    </a>
+                </div>
+                <div class="h5" style="color: rgb(91, 38, 57); font-weight: 700;">
+                    Ref link:
+                    <span class="clickableButton"
+                          onclick="copy_address('https://habu.finance/from/' + window.tronWeb.defaultAddress.base58)">
+                                    <span disabled id="referLink" class="ellipsis refLink"
+                                          style="color: rgb(91, 38, 57);"></span>
+                                    <span style="color: rgb(91, 38, 57); position: relative; top: 2px;">
+                                        <svg viewBox="64 64 896 896" focusable="false" class="" data-icon="copy"
+                                             width="1em"
+                                             height="1em" fill="currentColor" aria-hidden="true">
+                                            <path d="M832 64H296c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h496v688c0 4.4 3.6 8 8 8h56c4.4 0 8-3.6 8-8V96c0-17.7-14.3-32-32-32zM704 192H192c-17.7 0-32 14.3-32 32v530.7c0 8.5 3.4 16.6 9.4 22.6l173.3 173.3c2.2 2.2 4.7 4 7.4 5.5v1.9h4.2c3.5 1.3 7.2 2 11 2H704c17.7 0 32-14.3 32-32V224c0-17.7-14.3-32-32-32zM350 856.2L263.9 770H350v86.2zM664 888H414V746c0-22.1-17.9-40-40-40H232V264h432v624z"></path>
+                                        </svg>
+                                    </span>
+                                    </span>
+                </div>
+                <div class="tokenAmount">
+                    <div class="form-group">
+                        <div class="input-group mb-3">
+                            <input class="amount_input form-control" type="number" id="amount"
+                                   placeholder="How many TRX do you want to buy?">
+                            <div class="input-group-append">
+                                <span id="hamAmount" class="input-group-text">0 HAM</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row text-center mt-4 mb-5">
+                    <div class="col-md-12">
+                        <div class="swapButton m-0 disabled-btn" id="buy-btn">Buy Pre-sales</div>
+                    </div>
+                    <!--                    <div class="col-md-6">-->
+                    <!--                        <div class="swapButton m-0" id="justSwap-btn">JustSwap HAM/TRX</div>-->
+                    <!--                    </div>-->
+                </div>
+                <div id="clockdiv" class="clock">
+                    <div>
+                        <span class="days"></span>
+                        <div class="smalltext">Days</div>
+                    </div>
+                    <div>
+                        <span class="hours"></span>
+                        <div class="smalltext">Hours</div>
+                    </div>
+                    <div>
+                        <span class="minutes"></span>
+                        <div class="smalltext">Minutes</div>
+                    </div>
+                    <div>
+                        <span class="seconds"></span>
+                        <div class="smalltext">Seconds</div>
+                    </div>
+                </div>
+                <script>
+                    var hamAmount = 0;
+                    var trxAmount = 0;
+                    $("#amount").on("input", function () {
+
+                        trxAmount = $("#amount").val();
+                        var price = 16;
+
+                        hamAmount = parseInt(trxAmount) / parseInt(price);
+                        $("#hamAmount").text(hamAmount + " HAM");
+                    });
+
+                    // $("#justSwap-btn").click(function () {
+                    //     window.open('https://justswap.org/#/home', '_blank');
+                    // })
+
+                    var contractAddress = "TBVc4eMxqB76zaHunj7B7T2Tu5iqGdT7q6";
+                    // var contractAddress = "TLKYjLrWbjHCV8Q8sa1hoAdwLvXqfGT8Vv";
+
+                    $("#buy-btn").click(function () {
+
+                        if (isInstalled) {
+                            var a = document.getElementById("amount").value;
+
+                            if (a == "" || a <= 0) {
+                                alert("Please enter your Amount");
+                                return false;
+                            }
+                            if (window.tronWeb.defaultAddress.hex) {
+                                var a = document.getElementById("amount").value;
+                                if (a === "" || a <= 0) {
+                                    alert("Please enter your Amount");
+                                    return false;
+                                } else
+                                    //let res =  tronweb.contract().at("TSHMJka5fK4MR1Ug38ZkZ9NGSduXeqvX7b").buy(10).send();
+                                    window.tronWeb.contract().at(contractAddress).then(function (contract) {
+                                        contract.buy().send({
+                                            feeLimit: 1000000,
+                                            callValue: trxAmount * 1000000,
+                                            shouldPollResponse: true
+                                        }).then(function (res) {
+                                            console.log(res);
+                                            // buy end
+                                        });
+                                    });
+
+                            } else {
+                                alert("Please login tronlink ");
+                            }
+                        }
+                    });
+
+                    function updateAddressAndBalance() {
+                        if (isInstalled) {
+                            if (window.tronWeb.defaultAddress.hex) {
+                                $(".addressId").text(window.tronWeb.defaultAddress.base58);
+                                $("#referLink").text('https://habu.finance/from/' + window.tronWeb.defaultAddress.base58);
+                                $(".refLink").text(window.tronWeb.defaultAddress.base58);
+
+
+                                window.tronWeb.contract().at(contractAddress).then(function (contract) {
+                                    contract.balanceOf(window.tronWeb.defaultAddress.base58).call({shouldPollResponse: true}).then(function (res) {
+
+                                        console.log(res);
+                                        $(".habuBalance").text((parseInt(res) / 1000000000000000000).toLocaleString());
+
+                                    });
+                                });
+                            }
+
+                        }
+                    }
+
+                    setInterval(updateAddressAndBalance, 3000);
+
+                    function getBalanceSC() {
+                        var res = 0;
+                        fetch('https://apilist.tronscan.io/api/account?address=TYVMRcSxXBfRda6aShMRRsc5ovRWHEeZS4').then(response => response.json()).then(
+                            data => $("#scBalance").text((data.trc20token_balances[1].balance / 1000000000000000000).toLocaleString())
+                        );
+                    }
+
+                    function getToken() {
+                        var token = 1999000;
+                        $("#totalToken").text(parseInt(token).toLocaleString());
+                    }
+
+
+                    setInterval(getBalanceSC, 3000);
+                    setInterval(getToken, 3000);
+
+
+                    function copy_address(value) {
+                        var tempInput = document.createElement("input");
+                        tempInput.value = value;
+                        document.body.appendChild(tempInput);
+                        tempInput.select();
+                        document.execCommand("copy");
+                        document.body.removeChild(tempInput);
+                    }
+
+                </script>
+            </div>
+        </div>
+
+        <div class="ant-row-flex ant-row-flex-center ant-row-flex-middle dataSet"
+             style="margin-left: -16px; margin-right: -16px;">
+            <div align="left" class="ant-col ant-col-xs-24 ant-col-sm-24 ant-col-md-8"
+                 style="padding-left: 16px; padding-right: 16px;">
+                <div class="dataBox" style="height: 130px;text-align: center">
+                    <img src="/images/logo-ham.png" alt="hamburger">
+                    <div class="ballBalance" align="middle">
+                        <h2 class="habuBalance">0.000000</h2>
+                        <p>Hamburger Balance</p>
+                        <!--                        <p class="addressId"></p>-->
+                    </div>
+                </div>
+            </div>
+            <div align="left" class="ant-col ant-col-xs-24 ant-col-sm-24 ant-col-md-8"
+                 style="padding-left: 16px; padding-right: 16px;">
+                <div class="dataBox" style="height: 130px;text-align: center">
+                    <h2 style="text-align: center" id="scBalance">0.000</h2>
+                    <p style="text-align: center">Hamburger pre-sales available</p>
+                </div>
+            </div>
+            <div align="left" class="ant-col ant-col-xs-24 ant-col-sm-24 ant-col-md-8"
+                 style="padding-left: 16px; padding-right: 16px;">
+                <div class="dataBox" style="height: 130px;text-align: center">
+                    <h2 style="text-align: center" id="totalToken">1999000</h2>
+                    <p style="text-align: center">Total Supply</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modalBuy" tabindex="-1" role="dialog" aria-labelledby="modalBuyToken"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">My Wallet</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px"
+                         height="24px"
+                         viewBox="0 0 24 24" version="1.1">
+                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <g transform="translate(12.000000, 12.000000) rotate(-45.000000) translate(-12.000000, -12.000000) translate(4.000000, 4.000000)"
+                               fill="#000000">
+                                <rect x="0" y="7" width="16" height="2" rx="1"/>
+                                <rect opacity="0.3"
+                                      transform="translate(8.000000, 8.000000) rotate(-270.000000) translate(-8.000000, -8.000000) "
+                                      x="0"
+                                      y="7" width="16" height="2" rx="1"/>
+                            </g>
+                        </g>
+                    </svg>
+                </button>
+            </div>
+            <div class="row modal-body pt-0">
+                <div class="col-md-12">
+                    <div style="text-align: center;padding-top: 30px">
+                        <img src="/images/logo-ham.png" width="150px" alt="logo">
+                        <div class="ballBalance" align="middle">
+                            <h2 class="habuBalance">0.000000</h2>
+                            <p>Hamburger Balance</p>
+                            <h6 class="addressId"></h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="/js/main.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-app.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-analytics.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-firestore.js"></script>
+<script>
+    var firebaseConfig = {
+        apiKey: "AIzaSyBG2ugkbAGxnzOLgNbWfl8dsm1zS2GOPD0",
+        authDomain: "habu-finance.firebaseapp.com",
+        databaseURL: "https://habu-finance.firebaseio.com",
+        projectId: "habu-finance",
+        storageBucket: "habu-finance.appspot.com",
+    };
+
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore();
+</script>
+<!--<script src="../public/js/main.js"></script>-->
+</body>
+
+</html>
